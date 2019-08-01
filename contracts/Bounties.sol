@@ -1,10 +1,14 @@
 pragma solidity ^0.5.0;
 
+import '@openzeppelin/contracts/math/SafeMath.sol';
+
 /**
  * @dev Simple smart contract which allows any user to issue a bounty in ETH linked to requirements stored in ipfs
  * which anyone can fufill by submitting the ipfs hash which contains evidence of their fufillment
  */
 contract Bounties {
+
+  using SafeMath for uint;
 
   enum BountyStatus { CREATED, ACCEPTED, CANCELLED }
 
@@ -81,14 +85,14 @@ contract Bounties {
   * @param _deadline the unix timestamp after which fulfillments will no longer be accepted
   * @param _data the requirements of the bounty
   */
-  function issueBounty(string memory _data, uint64 _deadline)
+  function issueBounty(string memory _data, uint _deadline)
       public
       payable
       hasValue()
-      validateDeadline(_deadline)
+      validateDeadline(_deadline+now)
       returns (uint)
   {
-      bounties.push(Bounty(msg.sender, _deadline, _data, BountyStatus.CREATED, msg.value));
+      bounties.push(Bounty(msg.sender, _deadline+now, _data, BountyStatus.CREATED, msg.value));
       emit BountyIssued(bounties.length - 1,msg.sender, msg.value, _data);
       return (bounties.length - 1);
   }

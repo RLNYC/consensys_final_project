@@ -1395,12 +1395,12 @@
     "1564614400014": {
       "events": {},
       "links": {},
-      "address": "0xe5E78A8D91FFEc7F961738E45cba1035C7D5C173",
-      "transactionHash": "0xececec37347bf6c1667956d522ddc0b469c2998115d419f9177a3f6527e84e1d"
+      "address": "0xC1a7a1348c27100035FE86ca1f3212095382d853",
+      "transactionHash": "0xaada43770521d722d0067a179bf480d342bd35217e8bda42d80f13c72b0d265d"
     }
   },
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-07-31T23:06:55.775Z",
+  "updatedAt": "2019-08-01T03:44:37.818Z",
   "devdoc": {
     "methods": {}
   },
