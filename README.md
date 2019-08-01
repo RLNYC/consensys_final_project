@@ -9,6 +9,7 @@ This is a simple bounty market Dapp.
 
 
 ## To run Dapp on local server 
+Have ganache-cli running and use Truffle to migrate the contract to local network: 
 - First, cd into "/client" subdirectory
 - Second, run $ npm install
 - Third, run $ npm run start"
