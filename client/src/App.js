@@ -11,7 +11,11 @@ import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
+import BootstrapTable from 'react-bootstrap-table/lib/BootstrapTable';
+import TableHeaderColumn from 'react-bootstrap-table/lib/TableHeaderColumn';
+
 import "./App.css";
+import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 
 const etherscanBaseUrl = "https://rinkeby.etherscan.io"
 
@@ -67,6 +71,18 @@ class App extends Component {
     }
   };
 
+  addEventListener(component) {
+
+    this.state.bountiesInstance.events.BountyIssued({fromBlock: 0, toBlock: 'latest'})
+    .on('data', function(event){
+      console.log(event); // same results as the optional callback above
+      var newBountiesArray = component.state.bounties.slice()
+      newBountiesArray.push(event.returnValues)
+      component.setState({ bounties: newBountiesArray })
+    })
+    .on('error', console.error);
+  }
+
   render() {
     if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
@@ -113,6 +129,17 @@ class App extends Component {
             <Button type="submit">Issue Bounty</Button>
           </FormGroup>
       </Form>
+      </Card>
+      </Row>
+      <Row>
+      <Card>
+      <Card.Title>Issued Bounties</Card.Title>
+      <BootstrapTable data={this.state.bounties} striped hover>
+        <TableHeaderColumn isKey dataField='bounty_id'>ID</TableHeaderColumn>
+        <TableHeaderColumn dataField='issuer'>Issuer</TableHeaderColumn>
+        <TableHeaderColumn dataField='amount'>Amount</TableHeaderColumn>
+        <TableHeaderColumn dataField='data'>Bounty Data</TableHeaderColumn>
+      </BootstrapTable>
       </Card>
       </Row>
       </Container>
