@@ -1,8 +1,8 @@
 # Consensys Final Project
 This is a simple bounty market Dapp. 
--A job poster can create a new bounty and set a bounty descriptionm include the amount to be paid for a successful submission. 
--A bounty hunter is able to view a list of posted bounties. B
--A bounty hunter can submit work to a bounty for review.
+- A job poster can create a new bounty and set a bounty descriptionm include the amount to be paid for a successful submission. 
+- A bounty hunter is able to view a list of posted bounties. B
+- A bounty hunter can submit work to a bounty for review.
 
 - Screen recording link:https://youtu.be/tx9yacRwkUc 
 - Deployed contract is live on Rinkeby test net.  Link to one of the transactions: https://rinkeby.etherscan.io/tx/0xa18b8db74be480b49b96b432f7685ff7ebbfebfc172c5c95e312f87db0756d3d
