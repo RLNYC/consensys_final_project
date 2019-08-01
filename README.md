@@ -1,4 +1,4 @@
-# consensys_final_project
+# Consensys Final Project
 This is a simple bounty market Dapp. 
 -A job poster can create a new bounty and set a bounty descriptionm include the amount to be paid for a successful submission. 
 -A bounty hunter is able to view a list of posted bounties. B
