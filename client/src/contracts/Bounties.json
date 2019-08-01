@@ -11496,6 +11496,12 @@
     "version": "0.5.8+commit.23d335f2.Emscripten.clang"
   },
   "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0x5A21D7a14f9f75B9e17e4d39fD67C85F4d673233",
+      "transactionHash": "0x35e6c8a7a103d3fab68e30cecfcdfa9dc1fe254a9d3381dc92affc3606f0cbe6"
+    },
     "1564452298662": {
       "events": {},
       "links": {},
@@ -11523,12 +11529,12 @@
     "1564614400014": {
       "events": {},
       "links": {},
-      "address": "0x48a9f36057BF11B25c2a6875F0b5581Cf54E113E",
-      "transactionHash": "0xe07deb976c072464b495e9e09263dff34c9a9b0a718291ff6b2e7c5ea47aa7ca"
+      "address": "0x3b7D9720F549D8492dC430b78132fB78546E4180",
+      "transactionHash": "0xc922804e368eb2974056d7d0f44dd4a664080810df4dad08a35c3a06045f3c77"
     }
   },
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-08-01T03:44:37.810Z",
+  "updatedAt": "2019-08-01T05:38:46.566Z",
   "devdoc": {
     "details": "Simple smart contract which allows any user to issue a bounty in ETH linked to requirements stored in ipfs which anyone can fufill by submitting the ipfs hash which contains evidence of their fufillment",
     "methods": {
