@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@openzeppelin/contracts": "^2.3.0",
+    "@openzeppelin/contracts": "^4.7.2",
     "ajv": "^6.10.2",
     "bootstrap": "^3.4.1",
     "ipfs-mini": "^1.1.5",
